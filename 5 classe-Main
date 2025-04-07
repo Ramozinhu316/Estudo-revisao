@@ -1,0 +1,24 @@
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Bem-vindo ao RPG de Turnos!");
+
+        // Criando o jogador
+        Jogador jogador = Jogador.criarJogador();
+        System.out.println("\n" + jogador.nome + ", sua jornada começa agora!");
+
+        // Criando inimigos
+        Inimigo inimigo1 = new Inimigo("Goblin", 50, 8, 3);
+        Inimigo inimigo2 = new Inimigo("Orc", 80, 12, 6);
+
+        // Iniciando combate
+        Combate.iniciarCombate(jogador, inimigo1);
+        if (jogador.estaVivo()) {
+            Combate.iniciarCombate(jogador, inimigo2);
+        }
+
+        if (jogador.estaVivo()) {
+            System.out.println("\nParabéns, " + jogador.nome + ", você completou sua jornada!");
+        }
+    }
+}
