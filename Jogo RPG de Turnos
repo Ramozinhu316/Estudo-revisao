@@ -1,1 +1,40 @@
+public class Personagem {
+    protected String nome;
+    protected int vida;
+    protected int nivel;
+    protected int ataque;
+    protected int defesa;
 
+    public Personagem(String nome, int vida, int nivel, int ataque, int defesa) {
+        this.nome = nome;
+        this.vida = vida;
+        this.nivel = nivel;
+        this.ataque = ataque;
+        this.defesa = defesa;
+    }
+
+    public void atacar(Personagem inimigo) {
+        // Calculando o dano
+        int dano = Math.max(1, this.ataque - inimigo.defesa);
+        dano = (int) (dano + (Math.random() * 4) - 2); // Aleatoriedade no dano
+        inimigo.receberDano(dano);
+        System.out.println(this.nome + " atacou " + inimigo.nome + " causando " + dano + " de dano!");
+    }
+
+    public void receberDano(int dano) {
+        this.vida -= dano;
+        if (this.vida <= 0) {
+            this.vida = 0;
+            System.out.println(this.nome + " foi derrotado!");
+        }
+    }
+
+    public boolean estaVivo() {
+        return this.vida > 0;
+    }
+
+    public void subirNivel() {
+        this.nivel++;
+        this.ataque += 2;
+        this.defesa += 1;
+        this.vida
