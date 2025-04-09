@@ -1,8 +1,10 @@
+package com.mycompany.rgp;
+
 import java.util.Scanner;
 
 public class Combate {
 
-    public static void iniciarCombate(Jogador jogador, Inimigo inimigo) {
+    public static void iniciarCombate(Jogador jogador, inimigo inimigo) {
         Scanner scanner = new Scanner(System.in);
         while (jogador.estaVivo() && inimigo.estaVivo()) {
             System.out.println("\n" + jogador.nome + ": " + jogador.vida + " HP | " + inimigo.nome + ": " + inimigo.vida + " HP");
