@@ -1,4 +1,6 @@
-public class Main {
+package com.mycompany.rgp;
+
+public class RPG {
 
     public static void main(String[] args) {
         System.out.println("Bem-vindo ao RPG de Turnos!");
@@ -8,8 +10,8 @@ public class Main {
         System.out.println("\n" + jogador.nome + ", sua jornada começa agora!");
 
         // Criando inimigos
-        Inimigo inimigo1 = new Inimigo("Goblin", 50, 8, 3);
-        Inimigo inimigo2 = new Inimigo("Orc", 80, 12, 6);
+        inimigo inimigo1 = new inimigo("Goblin", 50, 8, 3);
+        inimigo inimigo2 = new inimigo("Orc", 80, 12, 6);
 
         // Iniciando combate
         Combate.iniciarCombate(jogador, inimigo1);
