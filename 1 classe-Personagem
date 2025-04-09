@@ -1,11 +1,13 @@
-public class Personagem {
+package com.mycompany.rgp;
+
+public class personagem {
     protected String nome;
     protected int vida;
     protected int nivel;
     protected int ataque;
     protected int defesa;
 
-    public Personagem(String nome, int vida, int nivel, int ataque, int defesa) {
+    public personagem(String nome, int vida, int nivel, int ataque, int defesa) {
         this.nome = nome;
         this.vida = vida;
         this.nivel = nivel;
@@ -13,7 +15,7 @@ public class Personagem {
         this.defesa = defesa;
     }
 
-    public void atacar(Personagem inimigo) {
+    public void atacar(personagem inimigo) {
         // Calculando o dano
         int dano = Math.max(1, this.ataque - inimigo.defesa);
         dano = (int) (dano + (Math.random() * 4) - 2); // Aleatoriedade no dano
@@ -37,4 +39,8 @@ public class Personagem {
         this.nivel++;
         this.ataque += 2;
         this.defesa += 1;
-        this.vida
+        this.vida += 1;
+    }
+}
+
+        
