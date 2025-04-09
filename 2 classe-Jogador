@@ -1,6 +1,8 @@
+package com.mycompany.rgp;
+
 import java.util.Scanner;
 
-public class Jogador extends Personagem {
+public class Jogador extends personagem {
 
     public Jogador(String nome) {
         super(nome, 100, 1, 10, 5);
