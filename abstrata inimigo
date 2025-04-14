@@ -1,0 +1,11 @@
+public class inimigo extends personagem {
+
+    public inimigo(String nome, int vida, int ataque, int defesa) {
+        super(nome, vida, 1, ataque, defesa);
+    }
+
+    @Override
+    public void usarHabilidade() {
+        System.out.println(this.nome + " rosna ameaçadoramente, preparando um ataque forte!");
+    }
+}
